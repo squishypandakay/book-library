@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>My library</title>
+    <link rel="stylesheet" href="styles.css"> <!-- Link to external CSS file -->
+  </head>
+  <body>
+    <div class="header">
+        <p>My favorite place to disappear</p>
+    </div>
+    <div class="search-bar"> <!-- Add a search bar -->
+        <input type="text" id="searchInput" placeholder="Search for books..."> <!-- Add a search input -->
+        <button onclick="searchBooks()">Search</button>  <!-- Add a search button -->
+        <select id="genreFilter">  <!-- Add a genre filter -->
+            <option value="">All Genres</option> <!-- Add an option to show all genres -->
+            <option value="fantasy">Fantasy</option> <!-- Add options for each genre -->
+            <option value="sci-fi">Sci-Fi</option>
+            <option value="mystery">Mystery</option>
+            <option value="manga">Manga</option>
+            <option value="young adult">Young Adult</option>
+            <option value="thriller">Thriller</option>
+            <option value="child's book">Child's Book</option>
+            <option value="romance">Romance</option>
+            <option value="biography">Biography</option>
+            <option value="mystery">Mystery</option> 
+            <option value="spicy">Spicy</option>
+            <option value="nature">Nature</option>
+        </select>
+        <select id="authorFilter"> <!-- Add an author filter -->
+            <option value="">All Authors</option> <!-- Add an option to show all authors -->
+            <option value="darrenshan">Darren Shan</option> <!-- Add options for each author -->
+            <option value="sarahj.maas">Sarah J. Maas</option>
+            <option value="koyoharugotouge">Koyoharu Gotouge</option>
+            <option value="sarahj.maas">Sarah J. Maas</option>
+            <option value="sarahj.maas">Sarah J. Maas</option>
+            <option value="sarahj.maas">Sarah J. Maas</option>
+            <option value="sarahj.maas">Sarah J. Maas</option>
+            <option value="sarahj.maas">Sarah J. Maas</option>
+            <option value="sarahj.maas"></option>
+            <option value="sarahj.maas"></option>
+            <!-- Add more authors as needed -->
+        </select>
+        <button onclick="filterBooks()">Search</button> <!-- Add a search button -->
+        <button onclick="resetFilters()">Reset</button>  <!-- Add a reset button -->
+    </div>
+    <div class="container"> <!-- Add a container for the books -->
+        <div class="book"data-genre="manga"data-author="Koyoharu Gotouge"> <!-- Add the genre as a data attribute -->
+            <img src="images/Demon slayer book 1.jpg" alt="Book1"> <!-- Add the image -->
+            <p>Demon slayer</p> <!-- Add the book title -->
+        </div>
+        <div class="book"data-genre="manga"data-author="">
+            <img src="images/goblin slyer book 1.jpg" alt="Book1">
+            <p>Goblin slayer</p>
+        </div>
+        <div class="book"data-genre="manga"data-author="">
+            <img src="images/Holic xxx.jpg" alt="Book1">
+            <p>Holic xxx</p>
+        </div>
+        <div class="book"data-genre="Manga"data-author="">
+            <img src="images/My neighbour totoro.webp" alt="Book1">
+            <p>My neighbour totoro - in Japanese</p>
+        </div>
+        <div class="book"data-genre="manga"data-author="">
+            <img src="images/parasyte.webp" alt="Book1">
+            <p>Parasyte</p>
+        </div>
+        <div class="book"data-genre="spicy"data-author="sarahj.maas">  
+            <img src="images/ACOTAR.jpg" alt="Book1">
+            <p>A court of thorns and roses</p>
+        </div>
+        <div class="book"data-genre=""data-author="">
+            <img src="images/Assasination classroom.jpg" alt="Book1">
+            <p>Assasination classroom</p>
+        </div>
+        <div class="book"data-genre=""data-author="">
+            <img src="images/Akame ga kill.webp" alt="Book1">
+            <p>Akame ga kill</p>
+        </div>
+        <div class="book"data-genre=""data-author="">
+            <img src="images/His dark materials.jpg" alt="Book1">
+            <p>His dark materials</p>
+        </div>
+        <div class="book"data-genre=""data-author="">
+            <img src="images/Lord loss.jpg" alt="Book1">
+            <p>Lord Loss</p>
+        </div>
+        <div class="book"data-genre=""data-author="">
+            <img src="images/The thin executioner.jpg" alt="Book1">
+            <p>The Thin executioner</p>
+        </div>
+        <div class="book"data-genre="Nau"data-author="David Attenborough">
+            <img src="images/The Life of mammals.avif" alt="Book1">
+            <p>The Life of mammals</p>
+        </div>
+        <div class="book"data-genre=""data-author="">
+            <img src="images/Pracession of the dead.jpg" alt="Book1">
+            <p>Pracession of the dead</p>
+        </div>
+        <div class="book"data-genre="Young Adult"data-author="Darren Shan">
+            <img src="images/Tunnels of blood.jpg" alt="Book1">
+            <p>Tunnels of blood</p>
+        </div>
+        <div class="book"data-genre="Young Adult"data-author="Darren Shan">
+            <img src="images/The Vampires Assistant.jpg" alt="Book1">
+            <p>The Vampires Assistant</p>
+        </div>
+        <div class="book"data-genre="Young Adult"data-author="Darren Shan">
+            <img src="images/Cirque du Freak.jpg" alt="Book1">
+            <p>Cirque du Freak</p>
+        </div>
+        <div class="book"data-genre="Young Adult"data-author="Darren Shan">
+            <img src="images/Darren Shan vol 1.jpg" alt="Book1">
+            <p>The saga of Darren Shan vol 1</p>
+        </div>
+        <div class="book"data-genre="Young Adult"data-author="Darren Shan">
+            <img src="images/The saga of Darren Shan vol 2.jpg" alt="Book1">
+            <p>The saga of Darren Shan vol 2</p>
+        </div>
+        <div class="book"data-genre="Young Adult"data-author="Darren Shan">
+            <img src="images/The saga of Darren Shan vol 3.jpg" alt="Book1">
+            <p>The saga of Darren Shan vol 3</p>
+        </div>
+        <div class="book"data-genre="Young Adult"data-author="Darren Shan">
+            <img src="images/Darren Shan vol 4.jpg" alt="Book1">
+            <p>The saga of Darren Shan vol 4</p>
+        </div>
+        <div class="book"data-genre=""data-author="Darren Shan">
+            <img src="images/Hell's Heroes.jpg" alt="Book1">
+            <p>Hell's Heroes</p>
+        </div>
+        <div class="book"data-genre=""data-author="Darren Shan">
+            <img src="images/Wolf Island.jpg" alt="Book1">
+            <p>Wolf Island</p>
+        </div>
+        <div class="book"data-genre=""data-author="Darren Shan">
+            <img src="images/Dark Calling.jpg" alt="Book1">
+            <p>Dark Calling</p>
+        </div>
+        <div class="book"data-genre=""data-author="Darren Shan">
+            <img src="images/Death's Shadow.jpg" alt="Book1">
+            <p>Death's Shadow</p>
+        </div>
+        <div class="book"data-genre=""data-author="Darren Shan">
+            <img src="images/Demon Apocalypse.jpg" alt="Book1">
+            <p>Demon Apocalypse</p>
+        </div>
+        <div class="book"data-genre=""data-author="Darren Shan">
+            <img src="images/Demon Thief.jpg" alt="Book1">
+            <p>Demon Thief</p>
+        </div>
+        <div class="book"data-genre=""data-author="Darren Shan">
+            <img src="images/Blood beast.jpg" alt="Book1">
+            <p>Blood Beast</p>
+        </div>
+        <div class="book"data-genre=""data-author="Darren Shan">
+            <img src="images/Slawter.jpg" alt="Book1">
+            <p>Slawter</p>
+        </div>
+        <div class="book"data-genre=""data-author="Darren Shan">
+            <img src="images/Bec.jpg" alt="Book1">
+            <p>Bec</p>
+        </div>
+    </div>
+    <script src="scripts.js"></script> <!-- Link to external JS file -->
+  </body>
+</html>
