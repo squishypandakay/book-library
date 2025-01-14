@@ -1,0 +1,22 @@
+{
+  "name": "online-book-reader",
+  "version": "1.0.0",
+  "description": "A node app for an online book library",
+  "main": "scripts.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/squishypandakay/book-library.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/squishypandakay/book-library/issues"
+  },
+  "homepage": "https://github.com/squishypandakay/book-library#readme",
+  "dependencies": {
+    "express": "^4.21.2"
+  }
+}
